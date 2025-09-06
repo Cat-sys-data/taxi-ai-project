@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taxi AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="landing">
+  <div class="popup" onclick="myFunction()">Click me!</div>
+
+  <div class="hero">
+    <h1>🚖 Smart Taxi Assistant</h1>
+    <p class="subtitle">Where do you want to go?</p>
+    <input type="text" id="user-input" placeholder="e.g., From Piassa to Bole" />
+    <button onclick="goToResults()">Find Rides</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Yom Desalegn. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goToResults() {
+      const input = document.getElementById('user-input').value;
+      localStorage.setItem('user_input', input);
+      window.location.href = 'results.html';
+    }
+
+    function myFunction() {
+      alert('Popup clicked! Customize this feature.');
+    }
+  </script>
+</body>
+</html>
