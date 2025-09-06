@@ -1,0 +1,25 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taxi AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing">
+  <div class="hero">
+    <h1>🚖 Smart Taxi Assistant</h1>
+    <p>Where do you want to go?</p>
+    <input type="text" id="user-input" placeholder="e.g., From Piassa to Bole" />
+    <button onclick="goToResults()">Find Rides</button>
+  </div>
+  <script>
+    function goToResults() {
+      const input = document.getElementById('user-input').value;
+      localStorage.setItem('user_input', input);
+      window.location.href = 'results.html';
+    }
+  </script>
+</body>
+</html>
